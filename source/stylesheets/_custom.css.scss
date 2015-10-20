@@ -93,3 +93,28 @@ h1,h2,h3,h4,h5,p{
   width: 100%;
   margin-top: 20px;
 }
+#ss-form{
+  margin-top: 10px;
+}
+#navigation-table{
+  width: 100%;
+}
+input{
+  font-family: 'vcr_osd_monoregular';
+  border-radius: 0 !important;
+}
+#ss-submit{
+  font-family: 'vcr_osd_monoregular';
+  width: 100%;
+  border-radius: 0;
+  font-size: 20px;
+  background-color: rgb(185,20,24);
+  border-color: rgb(185,20,24);
+}
+
+.download{
+  @extend #ss-submit;
+  &:hover, &:focus, &:active, &:active:hover{
+    @extend #ss-submit;
+  }
+}
