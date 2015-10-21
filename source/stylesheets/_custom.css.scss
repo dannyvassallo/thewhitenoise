@@ -1,2 +1,139 @@
 // Add custom css here or create more partials
 // and import them in all.css.scss!
+@font-face {
+    font-family: 'vcr_osd_monoregular';
+    src: url('../fonts/vcr_osd_mono_1.001-webfont.eot');
+    src: url('../fonts/vcr_osd_mono_1.001-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+         url('../fonts/vcr_osd_mono_1.001-webfont.woff') format('woff'),
+         url('../fonts/vcr_osd_mono_1.001-webfont.ttf') format('truetype'),
+         url('../fonts/vcr_osd_mono_1.001-webfont.svg#vcr_osd_monoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,body{
+  // height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,p{
+  font-family: 'vcr_osd_monoregular';
+  color: white;
+  z-index: 1; 
+  position: relative;
+  text-shadow: 1px 1px 10px rgba(185,20,24,1);
+}
+
+#gradient{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000)) fixed;
+  z-index: -9997;
+  box-shadow: inset 0 0 490px black;
+}
+
+#flicker {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/thewhitenoise/scanline.jpg');
+  z-index: -9998;
+  opacity: 0.1;
+}
+
+#flicker2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/thewhitenoise/static.jpg');
+  z-index: -9998;
+  opacity: 0.2;
+}
+
+#flicker3{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;  
+  background: url('https://s3.amazonaws.com/myfangate.com/thewhitenoise/snow.jpg') repeat;  
+  z-index: -9999;
+
+}
+
+#the-video{
+  box-shadow: 0px 0px 150px rgba(0, 0, 0, 4);
+}
+
+.logo{
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+#ss-form{
+  margin-top: 10px;
+}
+#navigation-table{
+  width: 100%;
+}
+input{
+  font-family: 'vcr_osd_monoregular';
+  border-radius: 0 !important;
+}
+#ss-submit{
+  font-family: 'vcr_osd_monoregular';
+  width: 100%;
+  border-radius: 0;
+  font-size: 20px;
+  background-color: rgb(185,20,24);
+  border-color: rgb(185,20,24);
+}
+
+.download{
+  @extend #ss-submit;
+  &:hover, &:focus, &:active, &:active:hover{
+    @extend #ss-submit;
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;  
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+  .row{
+    margin-top: 55px;
+  }
+}
